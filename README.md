@@ -82,6 +82,9 @@ This heatmap provides a clear visual representation of how the variables in data
 
 ## Scatter Plot Analysis
 Scatter plots are created to check the correlation between variables.
+The scatter plot matrix provides a comprehensive visual representation of the relationships between variables. 
+
+The scatter plot shows a positive correlation between total_sqft and price. Larger properties tend to be more expensive. This is expected as larger properties offer more living space and typically command higher prices. The scatter plot between price and the number of bedrooms shows a positive correlation The scatter plot indicates a strong positive correlation between the number of bathrooms and the number of bedrooms. There is a moderate positive correlation between total square footage and the number of bedrooms. shows a weak correlation with other variables like total_sqft, bath, price, and bhk. This suggests that the price per square foot is relatively independent of the property's size, number of bedrooms, or bathrooms.
 
 ## Conclusion
 The analysis provides insights into the distribution and relationships of house prices in Bangalore. Outlier removal methods and transformations help in normalizing the data and improving the analysis.
