@@ -5,6 +5,13 @@ This repository contains a detailed analysis of house prices per square foot in 
 
 This project aims to analyze house prices in Bangalore by examining the price per square foot. The analysis includes detecting and removing outliers using various statistical methods, checking data normality, and performing correlation analysis.
 
+1.Basic Exploratory Data Analysis (EDA)
+2.Outlier Detection and Removal using various methods
+3.Box Plot Analysis to determine the best outlier removal method
+4.Histogram and Normality Check with Transformations
+5.Correlation Analysis with Heatmap
+6.Scatter Plot Analysis to check the correlation between variables
+
 ## Project Structure
 
 - `house_price.csv`: Dataset containing house prices and other details.
