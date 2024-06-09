@@ -40,7 +40,6 @@ The EDA involves understanding the basic characteristics of the dataset, includi
 Outliers are identified as values that are more than three standard deviations away from the mean.
 This method helps in identifying extreme values in the dataset. By removing these outliers, the data becomes less spread out, allowing for a more accurate analysis.
 
-`
 ### Percentile Method
 Outliers are values outside the 5th and 95th percentiles.
 By trimming the extreme 5% of data on both ends, we ensure that our analysis focuses on the central 90% of the data, reducing the influence of extreme values.
@@ -52,6 +51,10 @@ This method is robust to extreme values and helps to remove data points that dev
 
 ### Z Score Method
 The Z-score method standardizes the data and identifies values that are unusually high or low compared to the rest of the data. By focusing on data points within three standard deviations of the mean, this method helps in normalizing the dataset.
+
+### Which Method is Better for Removing Outliers?
+Mean and Standard Deviation Method: This method is effective if the data is normally distributed, but it can be sensitive to extreme values. Percentile Method: This method is more robust to extreme outliers as it trims the extreme 5% from both ends. IQR Method: This method is robust and works well for skewed data, as it removes values beyond 1.5 times the IQR from the first and third quartiles. Z-Score Method: Keeps data with z-scores between -3 and 3.other data is removed Generally, the IQR Method and Percentile Method are often more robust and preferred for skewed distributions or data with extreme outliers. consider these data IQR and percentile method is more effective to remove outliers
+However, the best method depends on the specific characteristics and requirements of your dataset.
 
 ## Correlation Analysis
 The correlation between numerical columns is analyzed and visualized using a heatmap.
