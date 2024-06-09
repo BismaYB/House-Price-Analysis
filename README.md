@@ -56,8 +56,29 @@ The Z-score method standardizes the data and identifies values that are unusuall
 Mean and Standard Deviation Method: This method is effective if the data is normally distributed, but it can be sensitive to extreme values. Percentile Method: This method is more robust to extreme outliers as it trims the extreme 5% from both ends. IQR Method: This method is robust and works well for skewed data, as it removes values beyond 1.5 times the IQR from the first and third quartiles. Z-Score Method: Keeps data with z-scores between -3 and 3.other data is removed Generally, the IQR Method and Percentile Method are often more robust and preferred for skewed distributions or data with extreme outliers. consider these data IQR and percentile method is more effective to remove outliers
 However, the best method depends on the specific characteristics and requirements of your dataset.
 
+## Histogram and Normality Check
+
+Histograms and normality checks are performed before and after log transformation.
+Skewness and kurtosis are statistical measures used to describe the shape of the distribution:
+Skewness measures the asymmetry. A skewness value closer to 0 indicates a symmetric distribution.
+Kurtosis measures the heaviness of the tails. For a normal distribution, kurtosis is typically around 3.
+
+We calculate these metrics for the price_per_sqft column:
+
+Original Skewness: 108.26875024325159 (indicating a highly right-skewed distribution) 
+
+Original Kurtosis: 12090.633538860382 (indicating extremely heavy tails) The histogram shows that the data is extremely right-skewed, with a long tail on the right side, which aligns with our skewness and kurtosis values. Through this analysis, we observed that the original price_per_sqft data was highly skewed with extremely heavy tails, as indicated by the very high skewness and kurtosis values.
+
+Applying a log transformation significantly improved the distribution, resulting in skewness and kurtosis values closer to those of a normal distribution. Transformed Skewness: 1.4003259019533636 ,Transformed Kurtosis: 9.203000543610957 With a transformed skewness of approximately 1.4003 and a transformed kurtosis of around 9.2030, you likely have a distribution that is positively skewed (since the skewness is positive) and leptokurtic (since the kurtosis is greater than 3, indicating heavier tails than a normal distribution).
+
 ## Correlation Analysis
 The correlation between numerical columns is analyzed and visualized using a heatmap.
+High Correlation:
+There is a strong positive correlation between bath and bhk (0.9), suggesting that properties with more bedrooms typically have more bathrooms.
+There is a moderate positive correlation between total_sqft and price (0.57), indicating that larger properties tend to be more expensive.
+Weak Correlation:
+price_per_sqft has very weak correlations with all other variables, indicating that the price per square foot is relatively independent of the other variables in your dataset.
+This heatmap provides a clear visual representation of how the variables in dataset relate to one another, which can be useful for identifying potential predictors for property price or other dependent variables in  analysis.
 
 ## Scatter Plot Analysis
 Scatter plots are created to check the correlation between variables.
